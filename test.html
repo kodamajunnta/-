@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1">
+    <title>ふくトモ</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      ふくトモ
+    </header>
+    <main>
+      <h1>なにたべよ</h1>
+      <div>質問</div>
+
+      <form id="a1">
+      <div id="when"><p>いつ<br>
+      <label><input type="radio" name="q1" value="1">朝</label>
+      <label><input type="radio" name="q1" value="2">昼</label>
+      <label><input type="radio" name="q1" value="3">夜</label>
+      </p>
+      </div>
+      </form>
+      <form id="a2">
+      <div id="who"><p>だれ<br>
+      <label><input type="radio" name="q2" value="1">一人</label>
+      <label><input type="radio" name="q2" value="2">家族</label>
+      <label><input type="radio" name="q2" value="2">友達</label>
+      <label><input type="radio" name="q2" value="3">恋人</label>
+      </p>
+      </div>
+      </form>
+      <form id="a3">
+      <div id="how"><p>どのように<br>
+      <label><input type="radio" name="q3" value="1">お手軽</label>
+      <label><input type="radio" name="q3" value="2">ふつう</label>
+      <label><input type="radio" name="q3" value="3">贅沢</label>
+      </p>
+      </div>
+      </form>
+      <p><input type="button" id="checkButton" value="決定"></p>
+      <form action="result.html" method="get">
+      <p><input type="submit" id="go" value="探す"></p>
+      </form>
+
+      <script>
+      function ans1() {
+        let checkValue = a1.elements['q1'].value;
+        console.log(checkValue);
+      }
+      let a1 = document.getElementById('a1');
+      a1.elements[0].checked = true;
+      let check1 = document.getElementById('checkButton');
+      check1.addEventListener('click', ans1);
+
+      function ans2() {
+        let checkValue = a2.elements['q2'].value;
+        console.log(checkValue);
+      }
+      let a2 = document.getElementById('a2');
+      a2.elements[0].checked = true;
+      let check2 = document.getElementById('checkButton');
+      check2.addEventListener('click', ans2);
+
+      function ans3() {
+        let checkValue = a3.elements['q3'].value;
+        console.log(checkValue);
+      }
+      let a3 = document.getElementById('a3');
+      a3.elements[0].checked = true;
+      let check3 = document.getElementById('checkButton');
+      check3.addEventListener('click', ans3);
+
+      </script>
+
+
+    </main>
+    <footer>
+      <span>かまきり</span>
+      <a href="#">リンク</a>
+    </footer>
+  </body>
+</html.lang>
